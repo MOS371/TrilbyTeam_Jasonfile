@@ -1,0 +1,50 @@
+#main {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  #cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  i{
+      position: relative;
+      top : 10px;
+      right: 10px;
+      padding-left: 250px;
+  }
+
+  img{
+    display: block;
+      margin: 15% auto;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+  }
+
+  h1{
+      text-align: center;
+  }
+
+  .eRole{
+    width: 35%;
+    float: left;
+    margin-left: 5px;
+    color: black;
+    border: 1px;
+    padding: 5px 10px;
+    margin-top: 30px;
+    border-color: black;
+    border-style: dotted;
+  }
+
+  .card {
+      padding: 10px;
+      margin: 3%;
+      border: 1px solid gray;
+      width: 300px;
+      border-radius: 5%;
+  }

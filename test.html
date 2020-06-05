@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ghibli App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+
+        var getJSON = function(url, callback) {
+        
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://sandbox.bittsdevelopment.com/code1/fetchemployees.php', true);
+            xhr.responseType = 'json';
+            
+            xhr.onload = function() {
+            
+                var status = xhr.status;
+                
+                if (status == 200) {
+                    callback(null, xhr.response);
+                } else {
+                    callback(status);
+                }
+            };
+            
+            xhr.send();
+        };
+        
+        getJSON('http://time.jsontest.com',  function(err, data) {
+            
+            if (err != null) {
+                console.error(err);
+            } else {
+                
+                var text = `Date: ${data.date}
+        Time: ${data.time}
+        Unix time: ${data.milliseconds_since_epoch}`
+            
+                console.log(text);
+            }
+        });
+        
+        </script>
+  </body>
+</html>
